@@ -67,9 +67,9 @@ function markTodoComplete() {
 //     console.log('That todo is not created')
 //   }
 
-  for(todos.complete in todos === true);
+  if(todos.complete in todos === true)
     console.log('This task is complete');
-  if(todos.complete === false);
+  else(todos.complete === false)
     console.log('This task is NOT complete')
 }
 
@@ -89,9 +89,18 @@ function app(){
   // Print the length of the todos array above this comment
 
   // Iterate over the todos array and console.log each todo below this comment
-  todos.forEach((todo) => console.log(`Title of todo: ${todo.title} 
-    Details of the Todo: ${todo.description} 
-    Task complete? ${todo.complete}`))
+  for(let i=0; i < todos.length; i++){
+    console.log(`This is the title of the Todo: ${todos[i].title} 
+      Details of the Todo: ${todos[i].description}`)
+      markTodoComplete(todos);
+  }
+  // todos.forEach((todo) => console.log(`The title of the Todo: ${todo.title} 
+  // Details of the Todo: ${todo.description}`));
+  // markTodoComplete(todos)
+
+  // todos.forEach((todo) => console.log(`Title of todo: ${todo.title} 
+  //   Details of the Todo: ${todo.description} 
+  //   Task complete? ${todo.complete}`))
   // .forEach()
 }
 
